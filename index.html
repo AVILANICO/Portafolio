@@ -11,8 +11,8 @@
   <link rel="icon" href="./img/NA-LOGO.png" type="image/x-icon">
   <link rel="shortcut icon" href="./img/NA-LOGO.png" type="image/x-icon">
   <title>Portfolio | Avila</title>
-
   <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -133,7 +133,7 @@
           </div>
         </div>
       </div>
-      <a class="linkedin" href="CV.pdf" download="CV-Avila-Nicolás">
+      <a class="linkedin" href="./img/CV.pdf" download="CV-Avila-Nicolás">
         <button>
           Descargar CV <i class="fa-solid fa-download"></i>
           <span class="overlay"></span>
@@ -380,6 +380,11 @@
   </section>
 
   <!-- SECCION CONTACTO -->
+  <script>
+    function alerta() {
+      alert('¡Enviado con éxito!')
+    }
+  </script>
   <section id="contacto" class="contacto">
     <div class="contenido-seccion">
       <h2>CONTACTO</h2>
@@ -391,12 +396,11 @@
           <input type="email" name="correo" placeholder="Dirección de correo">
           <input type="text" name="asunto" placeholder="Asunto">
           <textarea name="mensaje" id="mensaje" cols="30" rows="7" placeholder="Mensaje"></textarea>
-          <button type="submit" name="enviar" value="Enviar Mensaje">
+          <button type="submit" name="enviar" value="Enviar Mensaje" onclick="alerta()">
             Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
             <span class="overlay"></span>
           </button>
           <input type="hidden" name="_next" value="https://portfolio-avila.netlify.app/#inicio">
-          <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#inicio"> -->
           <input type="hidden" name="_captcha" value="false">
         </form>
       </div>
